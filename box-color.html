@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box{
+    width: 300px;height: 300px;
+    border: 4px solid black;
+    border-radius: 20px;
+}
+button{
+    mix-blend-mode: difference;
+    border-radius: 10px;
+    font-size: 30px;
+    border: none;
+    background: seagreen;
+    padding: 10px 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button>change
+
+    </button>
+    <script>
+var btn=document.querySelector("button")
+var box=document.querySelector(".box")
+btn.addEventListener("click",function(){
+
+    var c1=Math.floor(Math.random()*255);
+var c2=Math.floor(Math.random()*255);
+var c3=Math.floor(Math.random()*255);
+
+box.style.backgroundColor=`rgb(${c1},${c2},${c3})`;
+btn.style.backgroundColor=`rgb(${c1},${c2},${c3})`;
+})
+
+
+
+
+    </script>
+</body>
+</html>

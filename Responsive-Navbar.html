@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    html,body{
+        width: 100%;height: 100%;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        background: grey ;
+
+    }
+    .nav{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        position: relative;
+        z-index: 999;
+    }
+    .extra{
+        transition: all ease 1s;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: salmon;
+        top:-100%
+    }
+    h2{
+        font-size: 40px;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    h5{
+        font-size: 30px;
+    }
+  .icon  i{
+        font-size: 30px;
+        font-weight: 900;
+        display: none;
+    }
+ 
+    @media (max-width:600px) {
+       .right{
+        width: 100%;
+        transition: all ease 1s;
+        width: 100%;
+        height:600px;
+        position: absolute;
+        background: salmon;
+        top:80px;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+       }
+      .icon  i{
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="extra"></div>
+        <div class="nav">
+            <h2>sheriyans</h2>
+            <div class="right">
+                <h5>about            </h5>
+                <h5>services</h5>
+                <h5>help</h5>
+                <h5>contact</h5>
+            </div>
+            <div class="icon"><i class="ri-menu-line"></i></div>
+        </div>
+    </div>
+    <script>
+var menu=document.querySelector(".icon");
+var full=document.querySelector(".right");
+var flag=0;
+menu.addEventListener("click",function(){
+
+    if(flag==0){
+        menu.innerHTML='<i class="ri-close-fill"></i>';
+        full.style.right=0;
+        flag=1;
+    }
+    else{
+        menu.innerHTML='<i class="ri-menu-line"></i>';
+        full.style.right="-100%";
+        flag=0;
+    }
+})
+    </script>
+</body>
+</html>

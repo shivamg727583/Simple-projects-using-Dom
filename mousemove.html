@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.crsr{
+    width: 30px;
+    height: 30px;
+    background: rgb(16, 252, 16);
+    filter: blur(5px);
+    border-radius: 50%;
+position: absolute;
+box-shadow:0 -10px 50px 20px green,0 0 50px 20px rgb(226, 255, 38),0 10px 10px  rgb(240, 6, 6);
+
+box-shadow: 11px 40px 400px 110px rgb(74, 231, 49);
+-webkit-box-shadow: 11px 40px 400px 110px rgb(42, 255, 70);
+-moz-box-shadow: 11px 40px 400px 110px rgb(86, 255, 81);
+
+}
+
+h1{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    -webkit-text-stroke: 2px red;
+    color: transparent;
+    -webkit-text-fill-color: rgb(251, 212, 122);
+    text-shadow: 10px -7px 6px rgb(255, 101, 101);
+    text-transform: uppercase;
+cursor: pointer;
+mix-blend-mode: difference;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="crsr"></div>
+    <div class="main">
+        
+<h1>Shivam GUptaa</h1>
+<h1>Shivam GUptaa</h1>
+<h1>Shivam GUptaa</h1>
+<h1>Shivam GUptaa</h1>
+    
+    </div>
+    <script>
+var crsr=document.querySelector(".crsr")
+document.querySelector(".main").addEventListener("mousemove",function(dets){
+crsr.style.left=dets.x +`px`;
+crsr.style.top=dets.y+`px`;
+
+})
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:linear-gradient(to right bottom,royalblue,rgb(255, 32, 32),rgb(62, 243, 62));
+        }
+        .card{
+            width: 300px;
+            height: 500px;
+            background:white;
+            border-radius: 10px;
+            position: relative;
+            border: 4px solid black;
+            overflow: hidden;
+        }
+        .storiya{
+            width: 100%;
+            height: 90px;
+            border-top: 1px solid rgb(233, 224, 224);
+            border-bottom: 1px solid rgb(229, 221, 221);
+            padding: 10px;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .storiya::-webkit-scrollbar{
+            display: none;
+        }
+        .story{
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(to right bottom,blue,violet,rgb(147, 11, 11),rgb(151, 245, 97));
+       padding: 3px;
+       display: inline-block;
+       margin-right: 5px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            
+        }
+        .status{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all ease-in-out .2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            z-index: -1;
+            /* background: red; */
+            background-position: center;
+            background-size: cover;
+         color: white;
+
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+        }
+        .nav{
+            padding: 0 10px;
+            padding-top: 20px;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+           
+        }
+        .nav1{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .dp{
+           background-position: center;
+           background-size: cover;
+            width: 40px;
+            height: 40px;
+            /* background: linear-gradient(to right bottom,blue,violet,rgb(147, 11, 11),rgb(151, 245, 97));     */
+            border-radius: 50%;
+            /* padding: 1px; */
+        }
+        .profile{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            /* gap: 10px; */
+            text-align: start;
+        }
+        .nav2 i{
+            font-size: 20px;
+        }
+        .foot{
+           position: absolute;
+           bottom: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+        justify-content: space-evenly;
+            align-items: center;
+            background: #000;
+        }
+       .sendmessage{
+            width: 70%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+        #sendmess{
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        border-radius: 20px;
+        font-size: 20px;
+    padding: 10px;
+        }
+        .foot i{
+            font-size: 30px;
+        }
+       .header{
+        width: 100%;
+        padding: 4px 10px;
+        height: 40px;
+        /* background: #000; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       }
+       .logo{
+        width: 100px;
+        height: 30px;
+    
+    
+       }
+       .logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+       .header-right i{
+font-size: 20px;
+font-weight: 900;
+margin-right: 10px;
+       }
+       .footer{
+        border-top: 1px solid gainsboro;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .footer i{
+        font-size: 20px;
+        opacity: .6;
+       }
+       .home-tab i{
+        opacity: 1;
+       }
+       .reels-tab{
+        width: 40px;
+        height: 30px;
+
+       }
+       .reels-tab img{
+        width: 100%;
+        height: 100%;
+object-fit: cover;
+opacity: .6;       }
+
+
+.process{
+width: 100%;
+height: 2px;
+border: 1px solid rgb(41, 40, 40);
+}
+.growth{
+    width: 0%;
+    height: 100%;
+    background: #a6a4a4;
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="status">
+           <div class="navbar">
+            <div class="process">
+                <div class="growth"></div>
+            </div>
+            <div class="nav">
+
+                <div class="nav1">
+                    <div class="dp">
+                       
+                    </div>
+                    <div class="profile">
+                        <div class="id"><h3>id</h3></div>
+                        <div class="music">
+                            <i class="ri-music-2-line"></i><span> A.R.rahman...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav2"><i class="ri-more-2-fill"></i></div>
+            </div>
+           </div>
+       
+            <div class="foot">
+                <div class="sendmessage">
+                    <input type="search" name="send" id="sendmess" placeholder="Send message">
+                </div>
+                <i class="ri-heart-3-fill"></i>
+                <i class="ri-send-plane-fill"></i>
+            </div>
+        </div>
+        <div class="header">
+<div class="logo"><img src="https://fontspy.com/renderfontfamily/30578/3/billabong-fam-3.png?text=Instagram" alt=""></div>
+<div class="header-right">
+    <i class="ri-heart-3-line"></i>
+    <i class="ri-wechat-2-line"></i>
+</div>      
+</div>
+       
+<div class="storiya">
+
+</div>
+
+<div class="footer">
+   <div class="home-tab"> <i class="ri-home-5-fill"></i></div>
+   <div class="search-tab"> <i class="ri-search-2-line"></i></div>
+   <div class="reels-tab"><img src="https://ezraproductions.com/wp-content/uploads/2020/10/Reels-Video-Production-Company-Instagram.png" alt="">
+
+   </div>
+   <div class="menu-tab"><i class="ri-user-3-fill"></i></div>
+</div>
+
+
+
+    </div>
+<script>
+
+var arr=[
+{username:"angel123",dp:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", story:"https://th.bing.com/th/id/R.f9c1030a46bcc39b13b9e0241e1c3d93?rik=hdc9Mi1RdOMqbg&riu=http%3a%2f%2fimg28.dreamies.de%2fimg%2f266%2fb%2f21bedxd5ogf.gif&ehk=NSH7Q613Aw%2bATfKBrCsETybKj0jjcoZKL%2b9ctbo0Lvw%3d&risl=&pid=ImgRaw&r=0"},
+{username:"Angel-12",dp:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1727&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",story:"https://media1.tenor.com/images/24c605f370a8fca210693b5b054b4b64/tenor.gif?itemid=17182702"},
+{username:"angel_official", dp:"https://plus.unsplash.com/premium_photo-1675107359685-f268487a3a46?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",story:"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+{ username:"devil_official",dp:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vZGVsfGVufDB8fDB8fHww" ,story:"https://plus.unsplash.com/premium_photo-1669703777695-f8052a432411?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVsfGVufDB8fDB8fHww"},
+{username:"devil_don",dp:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1vZGVsfGVufDB8fDB8fHww" ,story:"https://images.unsplash.com/photo-1495216875107-c6c043eb703f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vZGVsfGVufDB8fDB8fHww"}]
+
+
+var instaStatus=document.querySelector(".status")
+var storiya=document.querySelector(".storiya");
+// var iclick="";
+var clutter="";
+// var profile="";
+arr.forEach(function(ele,idx){
+    document.querySelector(".dp").style.backgroundImage=`url(${ele.dp})`
+    clutter += `
+        <div class="story">
+             <img id=${idx} src=${ele.dp} alt="">
+</div>
+ `
+ var redlike=0;
+var like=document.querySelector(".ri-heart-3-fill");
+like.addEventListener("click",function(){
+if(redlike==0){
+    like.style.color="red";
+    redlike=1;
+}
+else{
+    like.style.color="white";
+    redlike=0;
+}
+
+})
+
+})
+storiya.innerHTML=clutter
+
+storiya.addEventListener("click",function(dets){
+console.log(arr[dets.target.id].story)
+instaStatus.style.backgroundImage=`url(${arr[dets.target.id].story})`
+instaStatus.style.zIndex=1;
+
+setTimeout(function(){
+    instaStatus.style.zIndex=-1;
+},3000)
+
+
+document.querySelector(".dp").style.backgroundImage=`url(${arr[dets.target.id].dp})`
+document.querySelector(".id").innerHTML=`<h3>${arr[dets.target.id].username}</h3>`
+
+
+
+var grow=0;
+var growTime=setInterval(function(){
+   if(grow<=100){
+    grow++;
+    document.querySelector(".growth").style.width=grow+"%";
+   }
+   console.log(grow)
+},30)
+
+setTimeout(function(){
+    clearInterval(growTime)
+},3030)
+
+})
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
